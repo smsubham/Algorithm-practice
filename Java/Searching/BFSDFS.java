@@ -1,3 +1,9 @@
+/**
+ * Implementation of BreadthFirst and DepthFirst Search Algorithms.
+ * 
+ * @author Subham Mishra
+ * @since 19 feb 2016
+ * */
 Class Main {
 public void dfs() {
 		// DFS using Stack data structure
