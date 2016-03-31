@@ -5,8 +5,8 @@
 * @author Subham Mishra
 **/
 
-
-public static void BubbleSort( int [ ] num )
+public class BubbleSort{
+public static void bubbleSort( int [ ] num )
 {
      int j;
      boolean flag = true;   // set flag to true to begin first pass
@@ -27,3 +27,4 @@ public static void BubbleSort( int [ ] num )
             }
       }
 } 
+}
