@@ -1,8 +1,12 @@
 /**
 *Implementation of Selection Sort in java
 * Sorted in Decending order
+*Best , Average,Worst Cases
 *
-*@author Subham Mishra
+* Best Case        :    O(n^2)
+* Average Case     :    O(n^2)
+* Worst Case       :    O(n^2)
+* @author Subham Mishra
 **/
 
 
