@@ -1,3 +1,25 @@
+/**
+ * 
+ * Recursive implemmentation of Binary Search
+ * 
+ * <code>
+ * BinarySearch(A[0..N-1],ow, high , value) {
+ *   // invariants: value > A[i] for all i < low
+ *                   value < A[i] for all i > high
+ *    if (high < low)
+ *        return not_found // value would be inserted at index "low"
+ *    mid = (low + high) / 2
+ *    if (A[mid] > value)
+ *        return BinarySearch(A, value, low, mid-1)
+ *    else if (A[mid] < value)
+ *        return BinarySearch(A, value, mid+1, high)
+ *    else
+ *        return mid
+ *}
+ * <\code>
+ * 
+ * @author Subham Mishra
+ * */
 public class BinarySearchRecursive {
  
     public static int binarySearchRecursive(int[] sortedArray, int start, int end, int key) {
@@ -35,6 +57,10 @@ public class BinarySearchRecursive {
     System.out.println("Enter value to find");
 search = in.nextInt();
         int index = binarySearchRecursion(array,0,array.length,search);
+        if(index<0)
+        return;
+        else
         System.out.println("Found " + search +" at "+index+" index");
+  
     }
 }
