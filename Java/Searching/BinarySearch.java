@@ -1,7 +1,36 @@
 
 
 import java.util.Scanner;
- 
+
+/**
+ * Implementation of binary search algorithm in java
+ * 
+ * <code>
+ * BinarySearch(A[0..N-1], value) {
+ *    low = 0
+ *    high = N - 1
+ *     while (low <= high) {
+ *        // invariants: value > A[i] for all i < low
+ *                       value < A[i] for all i > high
+ *        mid = (low + high) / 2
+ *        if (A[mid] > value)
+ *            high = mid - 1
+ *        else if (A[mid] < value)
+ *            low = mid + 1
+ *        else
+ *            return mid
+ *    }
+ *    return not_found // value would be inserted at index "low"
+ * }
+ * <\code>
+ * 
+ * This searching technique will only work for sorted array.
+ * 
+ * For more information on Binary Search use below link
+ * https://en.wikipedia.org/wiki/Binary_search_algorithm
+ * 
+ * @author Subham Mishra
+ * */
 class BinarySearch 
 {
   public static void main(String args[])
@@ -24,23 +53,21 @@ class BinarySearch
  
     first  = 0;
     last   = n - 1;
-    middle = (first + last)/2;
  
     while( first <= last )
     {
-      if ( array[middle] < search )
-        first = middle + 1;    
-      else if ( array[middle] == search ) 
+      middle = (first + last)/2;
+      if ( array[middle] == search ) 
       {
         System.out.println(search + " found at location " + (middle + 1) + ".");
         break;
       }
+      else if ( array[middle] < search ) //true then element must be in right side of middle
+        first = middle + 1;    
       else
          last = middle - 1;
- 
-      middle = (first + last)/2;
    }
-   if ( first > last )
+   if ( first > last ) //true if all possiblties are already checked still element not found
       System.out.println(search + " is not present in the list.\n");
   }
 }
