@@ -19,6 +19,7 @@
      *  siftDown(a, 0, end)
      * </code>
      * 
+     * For more info : https://en.wikipedia.org/wiki/Heapsort
      * @author Subham Mishra
      **/
      
@@ -27,29 +28,27 @@
     {    
         private static int N;
 
-        /* Sort Function */
-
+        /**
+         * 
+         * Sort Function
+         * 
+        **/
         public static void heapSort(int arr[])
 
         {       
-
             heapify(arr);        
-
             for (int i = N; i > 0; i--)
-
             {
-
                 swap(arr,0, i);
-
                 N = N-1;
-
                 maxheap(arr, 0);
-
             }
-
         }     
-
-        /* Function to build a heap */   
+        /**
+         * 
+        *Function to build a heap 
+        * 
+        **/   
 
         public static void heapify(int arr[])
         {
